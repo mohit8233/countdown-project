@@ -1,44 +1,43 @@
-// timer countdown
+let time;
+let timeLeft;
 
-let timer;
-let timeleft;
+const display = document.getElementById("display")
+const message = document.getElementById("message")
+const secInput= document.getElementById("secInput")
 
-let display = document.getElementById("display")
-let message = document.getElementById("message")
-let secInput = document.getElementById("secInput")
-let startBtn = document.getElementById("startBtn")
-let stopBtn = document.getElementById("stopBtn")
+// start timer function
 
+function startTimer(){
+  clearInterval(time);
+  
+  timeLeft = secInput.value
 
-startBtn.addEventListener("click", ()=>{
+  if(!timeLeft || timeLeft <= 0){
+    message.textContent = "Please enter valid seconds!"
+    return;
+  }
 
-    timeleft = parseInt(secInput.value)
+  message.textContent = "";
+  display.textContent = timeLeft;
 
-    if(!timeleft || timeleft <= 0){
-       message.textContent = "pls enter valid number"
-       return
+  time = setInterval(() => {
+    timeLeft--;
+    display.textContent = timeLeft;
+    if(timeLeft <= 0){
+      clearInterval(time)
+      message.textContent = "Time's up!!"
     }
+  } , 1000)
 
-    message.textContent = ""
+}
 
-    display.textContent = timeleft
+// stop timer
 
+function stopTimer(){
+  clearInterval(time);
+  display.textContent = "0"
+  message.textContent = "Timer stopped!!"
+}
 
-    clearInterval(timer)
-    time = setInterval(() =>{
-        timeleft--
-        display.textContent = timeleft
-
-        if(timeleft <=0){
-            clearInterval(time)
-            document.getElementById("message").textContent = "Time's Up"
-        }
-    }, 1000)
-})
-
-
-stopBtn.addEventListener("click", ()=>{
-    clearInterval(time)
-                document.getElementById("message").textContent = "Time Stopped"
-
-})
+document.getElementById("startBtn").addEventListener("click" , startTimer)
+document.getElementById("stopBtn").addEventListener("click" , stopTimer)

@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>countdown</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
     <div class="box">
         <h2>Seconds Countdown</h2>
+        <div class="time" id="display">
+            0
+        </div>
+        <input type="number" id="secInput" placeholder="Enter  seeconds">
 
-        <input type="number" id="secInput" placeholder="Enter  Number">
-            <div class="time" id="display">
-              0  
-            </div>
-                <button class="start" id="startBtn">start</button>
-                <button class="stop" id="stopBtn">Stop</button>
-             <div class="message" id="message">
-
-             </div>
+        <button class="start" id="startBtn">start</button>
+        <button class="stop" id="stopBtn">Stop</button>
+        <div class="message" id="message"></div>
     </div>
-    <script src="main.js"></script> 
+    <script src="main.js"></script>
 </body>
+
 </html>
