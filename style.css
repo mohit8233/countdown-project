@@ -1,0 +1,84 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+ body {
+        font-family: Arial;
+        background: #111;
+        /* color: white; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+
+    }
+
+
+    .box{
+      width: 450px;
+      height: 400px;
+      background-color: white;
+       border-radius: 30px;
+       text-align: center;
+        padding-top: 30px;
+
+      
+    }
+     #secInput {
+        width: 50%;
+        padding: 10px;
+        border-radius: 7px;
+        
+         margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        
+        text-align: center;
+        
+    }
+
+    .time {
+        font-size: 40px;
+        font-weight: bold;
+        width: 130px;
+        height: 130px;
+        margin: auto;
+         margin-top: 20px;
+        border: 2px solid black;
+        border-radius: 50%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: antiquewhite;
+
+    }
+
+      button {
+        padding: 10px 17px;
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+        margin-top: 40px;
+        margin: 5px;
+        font-weight: bold;
+    }
+
+    .start{
+       margin-top: 40px;
+      background: rgb(0, 255, 42);
+      color: rgb(0, 0, 0);
+    }
+     .stop{
+      background: rgb(255, 0, 0);
+      color: white;
+    }
+
+     .message {
+       color: #ff5c5c;
+       height: 20px; 
+       margin-top: 8px; 
+      }
